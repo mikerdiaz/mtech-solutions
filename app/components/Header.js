@@ -1,18 +1,93 @@
+'use client';
+import { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { FaLinkedin, FaTwitter } from 'react-icons/fa';
+import ThemeToggle from './ThemeToggle';
+
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <header className="w-full sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
-      <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-        <a href="#top" className="font-bold text-4xl text-primary">
-          EvoNet <span className="text-accent">IP</span>
-        </a>
+    <header className="w-full sticky top-0 z-50 bg-white/90 dark:bg-slate-900 dark:text-white backdrop-blur border-b border-slate-200 dark:border-slate-700 transition-colors duration-300">
+      <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+        {/* Logo + Marca */}
+        <Link href="#top" className="group flex items-center gap-4 hover:opacity-90 transition">
+          <Image
+            src="/images/logo.png"
+            alt="Logo"
+            width={96}
+            height={96}
+            className="w-24 md:w-32 lg:w-36 h-auto rounded-full bg-gradient-to-tr from-white via-slate-100 to-white shadow-xl ring-4 ring-accent/40 p-2 transition-transform duration-300 ease-in-out hover:scale-105"
+          />
+          <span className="text-2xl md:text-3xl font-extrabold tracking-tight text-primary dark:text-accent group-hover:text-accent">
+            EvoNet <span className="text-accent">IP</span>
+          </span>
+        </Link>
+
+        {/* Menú Desktop */}
         <nav className="hidden md:flex gap-6 text-sm font-medium">
-          <a href="#services" className="hover:text-accent">Services</a>
-          <a href="#about" className="hover:text-accent">About</a>
-          <a href="#coverage" className="hover:text-accent">Coverage</a>
-          <a href="#contact" className="hover:text-accent">Contact</a>
+          <Link href="#services" className="hover:text-accent transition-colors duration-200">Services</Link>
+          <Link href="#about" className="hover:text-accent transition-colors duration-200">About</Link>
+          <Link href="#coverage" className="hover:text-accent transition-colors duration-200">Coverage</Link>
+          <Link href="#contact" className="hover:text-accent transition-colors duration-200">Contact</Link>
         </nav>
-        <a href="#contact" className="md:inline-block hidden bg-accent text-white px-4 py-2 rounded-md font-semibold hover:opacity-90 transition">Get a Quote</a>
+
+        {/* CTA Desktop */}
+        <Link
+          href="#contact"
+          className="hidden md:inline-block bg-accent text-white px-4 py-2 rounded-md font-semibold hover:opacity-90 transition"
+        >
+          Get a Quote
+        </Link>
+
+        {/* Iconos Sociales */}
+        <div className="hidden md:flex gap-4 ml-6">
+          {/* Redes sociales */}
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener"
+            className="hover:text-accent transition"
+          >
+            <FaLinkedin size={18} />
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener"
+            className="hover:text-accent transition"
+          >
+            <FaTwitter size={18} />
+          </a>
+          {/* Toggle modo oscuro */}
+          <ThemeToggle />
+        </div>
+        
+        {/* Botón Hamburguesa */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden text-2xl focus:outline-none"
+        >
+          ☰
+        </button>
       </div>
+
+      {/* Menú móvil */}
+      {isOpen && (
+        <nav className="md:hidden flex flex-col items-center gap-4 pb-4 text-sm font-medium">
+          <Link href="#services" className="hover:text-accent transition">Services</Link>
+          <Link href="#about" className="hover:text-accent transition">About</Link>
+          <Link href="#coverage" className="hover:text-accent transition">Coverage</Link>
+          <Link href="#contact" className="hover:text-accent transition">Contact</Link>
+          <Link
+            href="#contact"
+            className="bg-accent text-white px-4 py-2 rounded-md font-semibold hover:opacity-90 transition"
+          >
+            Get a Quote
+          </Link>
+        </nav>
+      )}
     </header>
-  )
+  );
 }

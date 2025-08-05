@@ -5,12 +5,12 @@ export const metadata = {
   description: 'Professional network installation services in Surrey, Tri-Cities, Burnaby and Metro Vancouver.',
 }
 
+// app/layout.js
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className="bg-white text-slate-900">
-        {children}
-      </body>
+    <html lang="es">
+      <head />
+      <body>{children}</body>
     </html>
-  )
+  );
 }
