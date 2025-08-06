@@ -1,31 +1,21 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { FaSun, FaMoon } from 'react-icons/fa';
+import useTheme from '../hooks/useTheme'; // Ajusta la ruta si es necesario
 
 export default function ThemeToggle() {
-  const [isDark, setIsDark] = useState(false);
-
-  useEffect(() => {
-    const root = document.documentElement;
-    const initialTheme = root.classList.contains('dark');
-    setIsDark(initialTheme);
-  }, []);
-
-  const toggleTheme = () => {
-    const root = document.documentElement;
-    if (isDark) {
-      root.classList.remove('dark');
-    } else {
-      root.classList.add('dark');
-    }
-    setIsDark(!isDark);
-  };
+  const { theme, toggleTheme } = useTheme();
+  const isDark = theme === 'dark';
 
   return (
     <button
       onClick={toggleTheme}
-      className="px-4 py-2 rounded bg-accent text-white hover:bg-accent-dark transition"
+      aria-label="Toggle theme"
+      className="flex items-center gap-2 px-3 py-2 rounded-md bg-accent text-white hover:bg-accent-dark transition"
     >
-      {isDark ? '☀️ Modo Claro' : '🌙 Modo Oscuro'}
+      {isDark ? <FaSun /> : <FaMoon />}
+      <span className="text-sm font-medium">
+        {isDark ? 'Light Mode' : 'Dark Mode'}
+      </span>
     </button>
   );
 }

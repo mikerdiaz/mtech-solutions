@@ -9,7 +9,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="w-full sticky top-0 z-50 bg-white/90 dark:bg-slate-900 dark:text-white backdrop-blur border-b border-slate-200 dark:border-slate-700 transition-colors duration-300">
+    <header className="w-full sticky top-0 z-50 bg-white/90 dark:bg-slate-900 dark:text-white backdrop-blur border-b border-slate-200 dark:border-slate-700 shadow-sm transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo + Marca */}
         <Link href="#top" className="group flex items-center gap-4 hover:opacity-90 transition">
@@ -27,10 +27,10 @@ export default function Header() {
 
         {/* Menú Desktop */}
         <nav className="hidden md:flex gap-6 text-sm font-medium">
-          <Link href="#services" className="hover:text-accent transition-colors duration-200">Services</Link>
-          <Link href="#about" className="hover:text-accent transition-colors duration-200">About</Link>
-          <Link href="#coverage" className="hover:text-accent transition-colors duration-200">Coverage</Link>
-          <Link href="#contact" className="hover:text-accent transition-colors duration-200">Contact</Link>
+          <Link href="#services" className="hover:text-accent dark:hover:text-accent transition-colors duration-200">Services</Link>
+          <Link href="#about" className="hover:text-accent dark:hover:text-accent transition-colors duration-200">About</Link>
+          <Link href="#coverage" className="hover:text-accent dark:hover:text-accent transition-colors duration-200">Coverage</Link>
+          <Link href="#contact" className="hover:text-accent dark:hover:text-accent transition-colors duration-200">Contact</Link>
         </nav>
 
         {/* CTA Desktop */}
@@ -41,14 +41,13 @@ export default function Header() {
           Get a Quote
         </Link>
 
-        {/* Iconos Sociales */}
-        <div className="hidden md:flex gap-4 ml-6">
-          {/* Redes sociales */}
+        {/* Iconos Sociales + Toggle */}
+        <div className="hidden md:flex gap-4 ml-6 items-center">
           <a
             href="https://linkedin.com"
             target="_blank"
             rel="noopener"
-            className="hover:text-accent transition"
+            className="hover:text-accent dark:hover:text-accent transition"
           >
             <FaLinkedin size={18} />
           </a>
@@ -56,18 +55,19 @@ export default function Header() {
             href="https://twitter.com"
             target="_blank"
             rel="noopener"
-            className="hover:text-accent transition"
+            className="hover:text-accent dark:hover:text-accent transition"
           >
             <FaTwitter size={18} />
           </a>
-          {/* Toggle modo oscuro */}
           <ThemeToggle />
         </div>
-        
+
         {/* Botón Hamburguesa */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden text-2xl focus:outline-none"
+          aria-label="Toggle menu"
+          aria-expanded={isOpen}
         >
           ☰
         </button>
@@ -75,11 +75,11 @@ export default function Header() {
 
       {/* Menú móvil */}
       {isOpen && (
-        <nav className="md:hidden flex flex-col items-center gap-4 pb-4 text-sm font-medium">
-          <Link href="#services" className="hover:text-accent transition">Services</Link>
-          <Link href="#about" className="hover:text-accent transition">About</Link>
-          <Link href="#coverage" className="hover:text-accent transition">Coverage</Link>
-          <Link href="#contact" className="hover:text-accent transition">Contact</Link>
+        <nav className="md:hidden flex flex-col items-center gap-4 pb-4 text-sm font-medium transition-colors duration-300">
+          <Link href="#services" className="hover:text-accent dark:hover:text-accent transition">Services</Link>
+          <Link href="#about" className="hover:text-accent dark:hover:text-accent transition">About</Link>
+          <Link href="#coverage" className="hover:text-accent dark:hover:text-accent transition">Coverage</Link>
+          <Link href="#contact" className="hover:text-accent dark:hover:text-accent transition">Contact</Link>
           <Link
             href="#contact"
             className="bg-accent text-white px-4 py-2 rounded-md font-semibold hover:opacity-90 transition"
