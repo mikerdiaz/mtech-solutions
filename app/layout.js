@@ -1,8 +1,8 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'MTech Solutions | Reliable Network Solutions in BC',
-  description: 'Professional network installation services in Surrey, Tri-Cities, Burnaby and Metro Vancouver.',
+  title: 'EvoNet IP | Reliable Network Solutions in BC',
+  description: 'Professional network installation services in Surrey, Tri-Cities, Burnaby and surrounding areas.',
 };
 
 export default function RootLayout({ children }) {

@@ -9,7 +9,7 @@ export default function Hero() {
           Reliable Network Solutions in BC
         </h1>
         <p className="mt-4 text-lg md:text-xl max-w-2xl">
-          Ethernet cabling, Wi‑Fi optimization, router & switch setup, and on‑site diagnostics — serving Surrey, Tri‑Cities and Burnaby.
+          Ethernet cabling, Wi‑Fi optimization, Router & Switch Setup, and On‑site Diagnostics — Serving in Surrey, Tri‑Cities, Burnaby and surrounding areas.
         </p>
         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
           <a

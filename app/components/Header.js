@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaInstagram, FaFacebook } from 'react-icons/fa';
+import { FaInstagram, FaFacebook, FaWhatsapp } from 'react-icons/fa';
 import ThemeToggle from './ThemeToggle';
 
 export default function Header() {
@@ -16,7 +16,7 @@ export default function Header() {
           <Image
             src="/images/logo.png"
             alt="Logo"
-            title="MTech Solutions"
+            title="Evonet IP"
             width={200}
             height={200}
             className="w-24 md:w-32 lg:w-36 h-auto rounded-full bg-gradient-to-tr from-white via-slate-100 to-white dark:from-slate-900 dark:to-slate-800 shadow-xl dark:shadow-slate-800 ring-4 ring-white dark:ring-slate-800 p-2 transition-transform duration-300 ease-in-out hover:scale-105 animate-fade-in"
@@ -59,6 +59,14 @@ export default function Header() {
             className="hover:text-accent dark:hover:text-accent transition"
           >
             <FaFacebook size={30} />
+          </a>
+          <a
+            href="https://web.whatsapp.com/"
+            target="_blank"
+            rel="noopener"
+            className="hover:text-accent dark:hover:text-accent transition"
+          >
+            <FaWhatsapp size={30} />
           </a>
           <ThemeToggle />
         </div>
