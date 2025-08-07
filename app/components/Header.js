@@ -10,7 +10,7 @@ export default function Header() {
 
   return (
     <header className="w-full sticky top-0 z-50 bg-white/90 dark:bg-slate-900 dark:text-white backdrop-blur border-b border-slate-200 dark:border-slate-700 shadow-sm transition-colors duration-300">
-      <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between flex-wrap gap-y-4">
         {/* Logo + Marca */}
         <Link href="#top" className="group flex items-center gap-4 hover:opacity-90 transition">
           <Image
@@ -19,11 +19,16 @@ export default function Header() {
             title="Evonet IP"
             width={200}
             height={200}
-            className="w-24 md:w-32 lg:w-36 h-auto rounded-full bg-gradient-to-tr from-white via-slate-100 to-white dark:from-slate-900 dark:to-slate-800 shadow-xl dark:shadow-slate-800 ring-4 ring-white dark:ring-slate-800 p-2 transition-transform duration-300 ease-in-out hover:scale-105 animate-fade-in"
+            className="w-20 md:w-28 lg:w-32 h-auto rounded-full bg-gradient-to-tr from-white via-slate-100 to-white dark:from-slate-900 dark:to-slate-800 shadow-xl dark:shadow-slate-800 ring-4 ring-white dark:ring-slate-800 p-2 transition-transform duration-300 ease-in-out hover:scale-105 animate-fade-in"
           />
-          <span className="text-2xl md:text-3xl font-extrabold tracking-tight text-primary dark:text-accent group-hover:text-accent">
-            {/* MTech <span className="text-accent">Solutions</span> */}
-          </span>
+          <div className="flex flex-col justify-center leading-snug">
+            <span className="text-lg md:text-xl font-semibold text-accent dark:text-accent-light typing w-full max-w-xs md:max-w-sm">
+              Networks that
+              </span>
+              <span className="text-lg md:text-xl font-semibold text-accent dark:text-accent-light typing w-full max-w-xs md:max-w-sm mt-1">
+                Evolve with You
+                </span>
+                </div>
         </Link>
 
         {/* Menú Desktop */}
@@ -37,36 +42,36 @@ export default function Header() {
         {/* CTA Desktop */}
         <Link
           href="#contact"
-          className="hidden md:inline-block bg-accent text-white px-4 py-2 rounded-md font-semibold hover:opacity-90 transition"
+          className="hidden md:inline-block bg-accent text-white px-5 py-2 rounded-full font-semibold hover:opacity-90 transition"
         >
           Get a Quote
         </Link>
 
         {/* Iconos Sociales + Toggle */}
-        <div className="hidden md:flex gap-4 ml-6 items-center">
+        <div className="hidden md:flex gap-4 items-center">
           <a
             href="https://instagram.com"
             target="_blank"
             rel="noopener"
-            className="hover:text-accent dark:hover:text-accent transition"
+            className="text-slate-500 dark:text-slate-300 hover:text-accent dark:hover:text-accent transition"
           >
-            <FaInstagram size={30} />
+            <FaInstagram size={24} />
           </a>
           <a
             href="https://facebook.com"
             target="_blank"
             rel="noopener"
-            className="hover:text-accent dark:hover:text-accent transition"
+            className="text-slate-500 dark:text-slate-300 hover:text-accent dark:hover:text-accent transition"
           >
-            <FaFacebook size={30} />
+            <FaFacebook size={24} />
           </a>
           <a
             href="https://web.whatsapp.com/"
             target="_blank"
             rel="noopener"
-            className="hover:text-accent dark:hover:text-accent transition"
+            className="text-slate-500 dark:text-slate-300 hover:text-accent dark:hover:text-accent transition"
           >
-            <FaWhatsapp size={30} />
+            <FaWhatsapp size={24} />
           </a>
           <ThemeToggle />
         </div>
@@ -91,7 +96,7 @@ export default function Header() {
           <Link href="#contact" className="hover:text-accent dark:hover:text-accent transition">Contact</Link>
           <Link
             href="#contact"
-            className="bg-accent text-white px-4 py-2 rounded-md font-semibold hover:opacity-90 transition"
+            className="bg-accent text-white px-5 py-2 rounded-full font-semibold hover:opacity-90 transition"
           >
             Get a Quote
           </Link>

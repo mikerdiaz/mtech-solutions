@@ -1,28 +1,19 @@
+
+'use client';
+
 export default function Hero() {
   return (
-    <section
-      id="top"
-      className="bg-primary text-white dark:bg-primary dark:text-white transition-colors duration-300"
-    >
-      <div className="max-w-6xl mx-auto px-4 py-24 text-center md:text-left">
+    <section className="bg-gradient-to-br from-blue-800 to-blue-600 text-white py-20 px-4 text-center">
+      <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
-          Reliable Network Solutions in BC
+          Smart Network & IP Camera Solutions
         </h1>
-        <p className="mt-4 text-lg md:text-xl max-w-2xl">
-          Ethernet cabling, Wi‑Fi optimization, Router & Switch Setup, and On‑site Diagnostics — Serving in Surrey, Tri‑Cities, Burnaby and surrounding areas.
+        <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto">
+          Clean installations, strong signals, and expert service for homes and businesses in Surrey, Tri-Cities, Burnaby, and surrounding areas.
         </p>
-        <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-          <a
-            href="#contact"
-            className="bg-accent text-white px-6 py-3 rounded-md font-semibold hover:opacity-90 transition-colors duration-200"
-          >
-            Request a Quote
-          </a>
-          <a
-            href="#services"
-            className="border border-white/20 px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-primary dark:hover:bg-white dark:hover:text-primary transition-colors duration-200"
-          >
-            See Services
+        <div className="mt-8">
+          <a href="#contact" className="inline-block bg-white text-blue-700 font-semibold px-6 py-3 rounded-full shadow-md hover:bg-slate-100 transition">
+            Request a Free Quote
           </a>
         </div>
       </div>
