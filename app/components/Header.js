@@ -16,12 +16,13 @@ export default function Header() {
           <Image
             src="/images/logo.png"
             alt="Logo"
-            width={150}
-            height={150}
-            className="w-24 md:w-32 lg:w-36 h-auto rounded-full bg-gradient-to-tr from-white via-slate-100 to-white shadow-xl ring-4 ring-accent/40 p-2 transition-transform duration-300 ease-in-out hover:scale-105"
+            title="MTech Solutions"
+            width={200}
+            height={200}
+            className="w-24 md:w-32 lg:w-36 h-auto rounded-full bg-gradient-to-tr from-white via-slate-100 to-white dark:from-slate-900 dark:to-slate-800 shadow-xl dark:shadow-slate-800 ring-4 ring-white dark:ring-slate-800 p-2 transition-transform duration-300 ease-in-out hover:scale-105 animate-fade-in"
           />
           <span className="text-2xl md:text-3xl font-extrabold tracking-tight text-primary dark:text-accent group-hover:text-accent">
-            {/*EvoNet <span className="text-accent">IP</span>*/}
+            {/* MTech <span className="text-accent">Solutions</span> */}
           </span>
         </Link>
 
