@@ -16,14 +16,14 @@ export default function About() {
     >
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">
-          About EvoNet IP
+          About IPnityAI
         </h2>
         <p
           className="prose prose-lg text-slate-600 dark:text-slate-300 mx-auto"
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          At <strong>EvoNet IP</strong>, we believe that fast, secure, and affordable network installations should be easy and accessible.
+          At <strong>IPnityAI</strong>, we believe that fast, secure, and affordable network installations should be easy and accessible.
           Founded by Mike Diaz, we specialize in clean and professional setups for home and small business networks, including wired and wireless systems,
           smart home integrations, and IP security camera installations.
         </p>

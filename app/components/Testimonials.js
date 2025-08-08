@@ -4,7 +4,7 @@
 export default function Testimonials() {
   const testimonials = [
     {
-      quote: "EvoNet IP transformed our office setup. Professional, fast, and super clean cabling.",
+      quote: "IPnityAI transformed our office setup. Professional, fast, and super clean cabling.",
       author: "Sandra T., Coquitlam"
     },
     {
@@ -16,11 +16,11 @@ export default function Testimonials() {
       author: "Rachel S., Port Moody"
     },
     {
-      quote: "I had no idea a network could be installed so neatly. EvoNet IP was on time, clear with pricing, and very respectful of our home.",
+      quote: "I had no idea a network could be installed so neatly. IPnityAI was on time, clear with pricing, and very respectful of our home.",
       author: "Aman D., Surrey"
     },
     {
-      quote: "EvoNet IP brought our small business network to life — zero dropouts and way faster than before.",
+      quote: "IPnityAI brought our small business network to life — zero dropouts and way faster than before.",
       author: "Leo H., Burnaby"
     },
     {
@@ -28,7 +28,7 @@ export default function Testimonials() {
       author: "Carla B., New Westminster"
     },
     {
-      quote: "We couldn’t stream movies in our basement before. Now it feels like fiber everywhere. Thank you EvoNet IP!",
+      quote: "We couldn’t stream movies in our basement before. Now it feels like fiber everywhere. Thank you IPnityAI!",
       author: "Daniel R., Coquitlam"
     },
     {
@@ -36,7 +36,7 @@ export default function Testimonials() {
       author: "Maria L., Surrey"
     },
     {
-      quote: "Super knowledgeable and very clean installation. I’d call EvoNet IP again in a heartbeat.",
+      quote: "Super knowledgeable and very clean installation. I’d call IPnityAI IP again in a heartbeat.",
       author: "Tariq A., Pitt Meadows"
     },
   ];

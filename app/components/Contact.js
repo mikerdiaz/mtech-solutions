@@ -10,7 +10,7 @@ export default function Contact() {
         </h2>
         <p className="mt-4 text-slate-600 dark:text-slate-300">
           Phone: <a href="tel:+16729625220" className="text-accent font-medium hover:underline">(672) 962-5220</a><br />
-          Email: <a href="mailto:mike@mtechsolutions.com" className="text-accent font-medium hover:underline">mike@evonetip.com</a><br />
+          Email: <a href="mailto:mike@mtechsolutions.com" className="text-accent font-medium hover:underline">mike@ipnityai.com</a><br />
           Location: Coquitlam, BC
         </p>
         <div className="mt-6">

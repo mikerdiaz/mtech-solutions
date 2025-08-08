@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaInstagram, FaFacebook, FaWhatsapp } from 'react-icons/fa';
@@ -7,6 +7,15 @@ import ThemeToggle from './ThemeToggle';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [showSecondLine, setShowSecondLine] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowSecondLine(true);
+    }, 1000); // 1 segundo de delay
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <header className="w-full sticky top-0 z-50 bg-white/90 dark:bg-slate-900 dark:text-white backdrop-blur border-b border-slate-200 dark:border-slate-700 shadow-sm transition-colors duration-300">
@@ -16,19 +25,21 @@ export default function Header() {
           <Image
             src="/images/logo.png"
             alt="Logo"
-            title="Evonet IP"
+            title="IPnityAI"
             width={200}
             height={200}
             className="w-20 md:w-28 lg:w-32 h-auto rounded-full bg-gradient-to-tr from-white via-slate-100 to-white dark:from-slate-900 dark:to-slate-800 shadow-xl dark:shadow-slate-800 ring-4 ring-white dark:ring-slate-800 p-2 transition-transform duration-300 ease-in-out hover:scale-105 animate-fade-in"
           />
           <div className="flex flex-col justify-center leading-snug">
             <span className="text-lg md:text-xl font-semibold text-accent dark:text-accent-light typing w-full max-w-xs md:max-w-sm">
-              Networks that
-              </span>
+              Infinite Connectivity
+            </span>
+            {showSecondLine && (
               <span className="text-lg md:text-xl font-semibold text-accent dark:text-accent-light typing w-full max-w-xs md:max-w-sm mt-1">
-                Evolve with You
-                </span>
-                </div>
+                Intelligent Control
+              </span>
+            )}
+          </div>
         </Link>
 
         {/* Menú Desktop */}
