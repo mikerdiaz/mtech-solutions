@@ -3,7 +3,13 @@ import { createSecureHeaders } from 'next-secure-headers';
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  async headers() {
+
+  // Agrega experimental.allowedDevOrigins para tu URL ngrok
+  experimental: {
+    allowedDevOrigins: ['https://4c80c56cbe8e.ngrok-free.app'], // pon aquí tu URL ngrok exacta
+  },
+
+  headers() {
     return [
       {
         source: '/(.*)',
