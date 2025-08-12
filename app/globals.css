@@ -2,9 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 🌙 Transiciones suaves para modo oscuro */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 🧭 Scroll suave */
 html, body {
   scroll-behavior: smooth;
 }
+
+/* ⌨️ Efecto de escritura */
 .typing {
   overflow: hidden;
   white-space: nowrap;

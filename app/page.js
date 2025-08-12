@@ -13,6 +13,7 @@ import AOSInitializer from './components/AOSInitializer';
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-black dark:bg-primary dark:text-white transition-colors duration-300 ease-in-out antialiased">
+      <AOSInitializer />
       <Header />
       <Hero />
       <Services />

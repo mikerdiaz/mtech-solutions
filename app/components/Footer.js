@@ -1,32 +1,60 @@
-
-'use client';
+// Footer.tsx
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faEnvelope, faMapMarkerAlt, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 export default function Footer() {
   return (
-    <footer className="bg-blue-900 text-white py-10 px-4">
-      <div className="max-w-6xl mx-auto text-center md:text-left grid md:grid-cols-3 gap-8">
+    <footer className="border-t border-slate-700 bg-blue-900 dark:bg-slate-900 text-white dark:text-slate-200 py-10 px-4 transition-colors duration-300">
+      <div className="max-w-6xl mx-auto flex flex-wrap justify-between gap-8">
+        {/* Contact Info */}
         <div>
-          <h3 className="font-bold text-xl mb-2">IPnityAI</h3>
-          <p>Smart network & security camera solutions across Surrey, Tri-Cities & Burnaby.</p>
+          <h2 className="text-lg font-semibold mb-4">Contacto</h2>
+          <p className="mb-2">
+            <FontAwesomeIcon icon={faPhone} className="mr-2" />
+            (672) 962-5220
+          </p>
+          <p className="mb-2">
+            <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
+            mike@ipnityai.com
+          </p>
+          <p className="mb-2">
+            <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-2" />
+            Coquitlam, BC
+          </p>
         </div>
+
+        {/* Enlaces */}
         <div>
-          <h4 className="font-semibold mb-2">Contact</h4>
-          <p>📞 (672) 962-5220</p>
-          <p>✉️ mike@ipnityai.com</p>
-          <p>📍 Coquitlam, BC</p>
-        </div>
-        <div>
-          <h4 className="font-semibold mb-2">Quick Links</h4>
-          <ul className="space-y-1">
-            <li><a href="#about" className="hover:underline">About</a></li>
-            <li><a href="#services" className="hover:underline">Services</a></li>
-            <li><a href="#testimonials" className="hover:underline">Testimonials</a></li>
-            <li><a href="#contact" className="hover:underline">Contact</a></li>
-          </ul>
+          <h2 className="text-lg font-semibold mb-4">Redes & Web</h2>
+          <p className="mb-2">
+            <FontAwesomeIcon icon={faGlobe} className="mr-2" />
+            <a
+              href="https://www.ipnityai.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline hover:text-accent"
+            >
+              www.ipnityai.com
+            </a>
+          </p>
+          <p className="mb-2">
+            <FontAwesomeIcon icon={faInstagram} className="mr-2" />
+            <a
+              href="https://www.instagram.com/ipnityai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline hover:text-accent"
+            >
+              Instagram: @ipnityai
+            </a>
+          </p>
         </div>
       </div>
-      <div className="mt-10 text-center text-sm text-slate-300">
-        &copy; {new Date().getFullYear()} IPnityAI. All rights reserved.
+
+      {/* Footer Bottom */}
+      <div className="mt-10 text-center text-sm text-slate-400">
+        &copy; {new Date().getFullYear()} IpniTyAI. Todos los derechos reservados.
       </div>
     </footer>
   );

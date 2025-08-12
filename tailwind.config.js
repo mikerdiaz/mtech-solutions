@@ -7,10 +7,10 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-  extend: {
-    colors: {
-      primary: '#1e3a8a',  // Azul profesional
-      accent: '#2563eb',   // Azul fuerte para botones o CTA
+    extend: {
+      colors: {
+        primary: '#1e3a8a',       // Azul profesional
+        accent: '#2563eb',        // Azul fuerte para botones o CTA
         'accent-light': '#67e8f9',
         'accent-dark': '#0891b2',
       },
@@ -19,8 +19,8 @@ module.exports = {
       },
       keyframes: {
         fadeIn: {
-           '0%': { opacity: 0, transform: 'translateY(-10px)' },
-           '100%': { opacity: 1, transform: 'translateY(0)' },
+          '0%': { opacity: 0, transform: 'translateY(-10px)' },
+          '100%': { opacity: 1, transform: 'translateY(0)' },
         },
       },
     },

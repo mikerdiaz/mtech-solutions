@@ -14,15 +14,17 @@ export default function Header() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Cerrar menú móvil al hacer click en link
   const handleLinkClick = () => setIsOpen(false);
 
   return (
     <header className="w-full sticky top-0 z-50 bg-white/90 dark:bg-slate-900 dark:text-white backdrop-blur border-b border-slate-200 dark:border-slate-700 shadow-sm transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-y-4">
-        
         {/* Logo + Marca */}
-        <Link href="#top" className="flex items-center gap-3 hover:opacity-90 transition" onClick={handleLinkClick}>
+        <Link
+          href="#top"
+          className="flex items-center gap-3 hover:opacity-90 transition"
+          onClick={handleLinkClick}
+        >
           <Image
             src="/images/logo.png"
             alt="NetAIQ Logo"
@@ -69,9 +71,9 @@ export default function Header() {
         {/* Redes + Theme Toggle */}
         <div className="hidden md:flex gap-4 items-center">
           {[
-            { icon: <FaInstagram />, href: "https://instagram.com" },
-            { icon: <FaFacebook />, href: "https://facebook.com" },
-            { icon: <FaWhatsapp />, href: "https://wa.me/16729625220" },
+            { icon: <FaInstagram />, href: 'https://instagram.com' },
+            { icon: <FaFacebook />, href: 'https://facebook.com' },
+            { icon: <FaWhatsapp />, href: 'https://wa.me/16729625220' },
           ].map((item, i) => (
             <a
               key={i}

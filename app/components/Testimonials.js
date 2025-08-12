@@ -1,4 +1,3 @@
-
 'use client';
 
 export default function Testimonials() {
@@ -36,20 +35,32 @@ export default function Testimonials() {
       author: "Maria L., Surrey"
     },
     {
-      quote: "Super knowledgeable and very clean installation. I’d call IPnityAI IP again in a heartbeat.",
+      quote: "Super knowledgeable and very clean installation. I’d call IPnityAI again in a heartbeat.",
       author: "Tariq A., Pitt Meadows"
     },
   ];
 
   return (
-    <section id="testimonials" className="py-20 px-4 bg-white dark:bg-slate-900 text-slate-800 dark:text-white">
+    <section
+      id="testimonials"
+      className="py-20 px-4 bg-white dark:bg-slate-900 text-slate-800 dark:text-white transition-colors duration-300"
+    >
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-12">What Our Clients Say</h2>
         <div className="grid md:grid-cols-2 gap-10">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-slate-100 dark:bg-slate-800 p-6 rounded-xl shadow">
-              <p className="italic text-lg mb-4">“{testimonial.quote}”</p>
-              <p className="font-semibold text-blue-700 dark:text-blue-400">— {testimonial.author}</p>
+            <div
+              key={index}
+              className="bg-slate-100 dark:bg-slate-800 p-6 rounded-xl shadow hover:shadow-lg hover:scale-[1.02] transition-all duration-300"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+            >
+              <blockquote className="italic text-base md:text-lg mb-4">
+                “{testimonial.quote}”
+              </blockquote>
+              <p className="font-semibold text-blue-700 dark:text-blue-400">
+                — {testimonial.author}
+              </p>
             </div>
           ))}
         </div>

@@ -45,7 +45,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-20 px-4 bg-white dark:bg-slate-900 text-slate-800 dark:text-white"
+      className="py-20 px-4 bg-white dark:bg-slate-900 text-slate-800 dark:text-white transition-colors duration-300"
       aria-labelledby="about-heading"
     >
       <div className="max-w-4xl mx-auto text-center">

@@ -4,14 +4,22 @@ import { TypeAnimation } from 'react-type-animation';
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-600 text-white py-28 px-6 text-center overflow-hidden">
+    <section
+      className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-600 text-white py-28 px-6 text-center overflow-hidden transition-colors duration-300"
+      id="hero"
+    >
       {/* Fondo decorativo */}
       <div
         className="absolute inset-0 bg-[url('/images/network-pattern.svg')] opacity-10 bg-cover bg-center pointer-events-none"
         aria-hidden="true"
       ></div>
 
-      <div className="relative max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="800">
+      <div
+        className="relative max-w-4xl mx-auto"
+        data-aos="fade-up"
+        data-aos-duration="800"
+        data-aos-delay="100"
+      >
         {/* Animación tipo máquina de escribir */}
         <h1 className="text-4xl md:text-6xl font-extrabold leading-tight drop-shadow-xl tracking-tight">
           <TypeAnimation
