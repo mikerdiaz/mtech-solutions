@@ -4,9 +4,8 @@ import { createSecureHeaders } from 'next-secure-headers';
 const nextConfig = {
   reactStrictMode: true,
 
-  // Agrega experimental.allowedDevOrigins para tu URL ngrok
   experimental: {
-    allowedDevOrigins: ['https://4c80c56cbe8e.ngrok-free.app'], // pon aquí tu URL ngrok exacta
+    allowedDevOrigins: ['https://15ba62ef90fe.ngrok-free.app'],
   },
 
   headers() {
@@ -18,10 +17,14 @@ const nextConfig = {
             directives: {
               defaultSrc: ["'self'"],
               scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'"],
-              styleSrc: ["'self'", "'unsafe-inline'"],
+              styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
               imgSrc: ["'self'", 'data:', 'https:'],
-              fontSrc: ["'self'", 'https:', 'data:'],
-              connectSrc: ["'self'"],
+              fontSrc: ["'self'", 'https:', 'data:', "https://fonts.gstatic.com"],
+              connectSrc: [
+                "'self'",
+                "https://api.emailjs.com",
+                "https://4c80c56cbe8e.ngrok-free.app",
+              ],
             },
           },
           referrerPolicy: 'no-referrer',

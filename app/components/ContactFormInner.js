@@ -25,8 +25,8 @@ export default function ContactFormInner() {
         'service_cg6b0mq', // Service ID
         'template_blxdjhv', // Template ID
         {
-          user_name: form.name,
-          user_email: form.email,
+          name: form.name,
+          email: form.email,
           message: form.message,
         },
         'k_SWMIwjPqlqJMbuA' // Public Key
