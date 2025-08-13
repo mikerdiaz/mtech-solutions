@@ -52,7 +52,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Footer Bottom */} // Este es un cambio de prueba para activar el deployment
+      {/* Footer Bottom */}
       <div className="mt-10 text-center text-sm text-slate-400">
         &copy; {new Date().getFullYear()} IpniTyAI. Todos los derechos reservados.
       </div>
