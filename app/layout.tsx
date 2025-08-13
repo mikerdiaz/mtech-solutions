@@ -1,7 +1,7 @@
 import './globals.css';
 import AOSInitializer from './components/AOSInitializer';
 import ThemeToggle from './components/ThemeToggle';
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/next";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
