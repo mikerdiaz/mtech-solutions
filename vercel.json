@@ -1,17 +1,23 @@
 {
   "redirects": [
     {
-      "source": "/(.*)",
-      "destination": "https://ipnityai.com/$1",
-      "permanent": true
-    },
-    {
       "source": "/",
       "destination": "https://ipnityai.com",
       "has": [
         {
           "type": "host",
           "value": "www.ipnityai.com"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "destination": "https://ipnityai.com/$1",
+      "has": [
+        {
+          "type": "host",
+          "value": "ipnityai.com"
         }
       ],
       "permanent": true
