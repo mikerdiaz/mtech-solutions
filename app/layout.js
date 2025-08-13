@@ -1,8 +1,9 @@
 import './globals.css';
 import AOSInitializer from './components/AOSInitializer';
 import ThemeToggle from './components/ThemeToggle';
+import { Analytics } from '@vercel/analytics/react';
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
           <ThemeToggle />
         </div>
         {children}
+        <Analytics />
       </body>
     </html>
   );
