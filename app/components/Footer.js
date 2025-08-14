@@ -16,7 +16,7 @@ export default function Footer() {
           </p>
           <p className="mb-2">
             <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
-            mike@ipnityai.com
+            admin@ipnityai.com
           </p>
           <p className="mb-2">
             <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-2" />
