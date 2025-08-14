@@ -32,13 +32,13 @@ export default function ContactFormInner() {
         'k_SWMIwjPqlqJMbuA' // Public Key
       );
 
-      console.log('✅ EmailJS respuesta:', res);
+      console.log('✅ Email enviado:', res);
 
       setStatus({ type: 'success', message: 'Message sent successfully! 🎉' });
       setForm({ name: '', email: '', message: '' });
 
     } catch (error) {
-      console.error('❌ Error completo:', error);
+      console.error('❌ Error al enviar:', error);
 
       let errorMessage = 'Failed to send message.';
 
