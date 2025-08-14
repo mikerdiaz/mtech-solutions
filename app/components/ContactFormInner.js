@@ -23,7 +23,7 @@ export default function ContactFormInner() {
 
       const res = await emailjs.send(
         'service_dif2ppo', // Service ID
-        'template_blxdjhv', // Template ID
+        'template_xf6l88f', // Template ID
         {
           name: form.name,
           email: form.email,
