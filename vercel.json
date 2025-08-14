@@ -6,7 +6,7 @@
       "has": [
         {
           "type": "host",
-          "value": "www.ipnityai.com"
+          "value": "ipnityai.ca"
         }
       ],
       "permanent": true
@@ -17,7 +17,7 @@
       "has": [
         {
           "type": "host",
-          "value": "ipnityai.ca"
+          "value": "www.ipnityai.com"
         }
       ],
       "permanent": true
