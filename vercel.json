@@ -10,6 +10,17 @@
         }
       ],
       "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "destination": "https://ipnityai.com/$1",
+      "has": [
+        {
+          "type": "host",
+          "value": "ipnityai.ca"
+        }
+      ],
+      "permanent": true
     }
   ]
 }
