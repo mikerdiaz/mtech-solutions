@@ -6,6 +6,17 @@
       "has": [
         {
           "type": "host",
+          "value": "www.ipnityai.com"
+        }
+      ],
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "destination": "https://ipnityai.com/$1",
+      "has": [
+        {
+          "type": "host",
           "value": "ipnityai.ca"
         }
       ],
@@ -17,7 +28,7 @@
       "has": [
         {
           "type": "host",
-          "value": "www.ipnityai.com"
+          "value": "www.ipnityai.ca"
         }
       ],
       "permanent": true
