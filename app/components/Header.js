@@ -71,7 +71,7 @@ export default function Header() {
         {/* Redes + Theme Toggle */}
         <div className="hidden md:flex gap-4 items-center">
           {[
-            { icon: <FaInstagram />, href: 'https://instagram.com' },
+            { icon: <FaInstagram />, href: 'https://www.instagram.com/ipnityai' },
             { icon: <FaFacebook />, href: 'https://facebook.com' },
             { icon: <FaWhatsapp />, href: 'https://wa.me/16729625220' },
           ].map((item, i) => (

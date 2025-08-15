@@ -4,10 +4,6 @@ import { createSecureHeaders } from 'next-secure-headers';
 const nextConfig = {
   reactStrictMode: true,
 
-  experimental: {
-    allowedDevOrigins: ['https://15ba62ef90fe.ngrok-free.app'],
-  },
-
   headers() {
     return [
       {
@@ -16,7 +12,12 @@ const nextConfig = {
           contentSecurityPolicy: {
             directives: {
               defaultSrc: ["'self'"],
-              scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'"],
+              scriptSrc: [
+                "'self'",
+                "'unsafe-inline'",
+                "'unsafe-eval'",
+                "https://va.vercel-scripts.com"
+              ],
               styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
               imgSrc: ["'self'", 'data:', 'https:'],
               fontSrc: ["'self'", 'https:', 'data:', "https://fonts.gstatic.com"],
@@ -35,6 +36,7 @@ const nextConfig = {
             microphone: '()',
             geolocation: '()',
           },
+          strictTransportSecurity: 'max-age=63072000; includeSubDomains; preload',
         }),
       },
     ];

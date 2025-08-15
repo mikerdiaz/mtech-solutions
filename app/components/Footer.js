@@ -46,7 +46,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="hover:underline hover:text-accent"
             >
-              Instagram: @ipnityai
+              @ipnityai
             </a>
           </p>
         </div>
