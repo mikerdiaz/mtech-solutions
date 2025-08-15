@@ -16,7 +16,8 @@ const nextConfig = {
                 "'self'",
                 "'unsafe-inline'",
                 "'unsafe-eval'",
-                "https://va.vercel-scripts.com"
+                "https://va.vercel-scripts.com",
+                "https://vercel.live"
               ],
               styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
               imgSrc: ["'self'", 'data:', 'https:'],
