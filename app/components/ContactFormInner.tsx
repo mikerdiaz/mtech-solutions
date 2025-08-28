@@ -5,14 +5,14 @@ import emailjs from '@emailjs/browser';
 
 export default function ContactFormInner() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
-  const [status, setStatus] = useState(null);
+  const [status, setStatus] = useState<null | { type: 'success' | 'error'; message: string }>(null);
   const [isSending, setIsSending] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus(null);
     setIsSending(true);
@@ -37,24 +37,21 @@ export default function ContactFormInner() {
       setStatus({ type: 'success', message: 'Message sent successfully! 🎉' });
       setForm({ name: '', email: '', message: '' });
 
-    } catch (error) {
+    } catch (error: any) {
       console.error('❌ Error al enviar:', error);
 
       let errorMessage = 'Failed to send message.';
 
       if (error?.message?.includes('Failed to fetch')) {
         errorMessage = 'Network error: Check your internet connection or EmailJS domain settings.';
-      } 
-      else if (error?.text?.includes('User ID')) {
+      } else if (error?.text?.includes('User ID')) {
         errorMessage = 'Invalid EmailJS credentials: Verify your Service ID, Template ID, and Public Key.';
-      }
-      else if (error?.status === 403) {
+      } else if (error?.status === 403) {
         errorMessage = 'Access denied: Your domain is not allowed in EmailJS settings.';
       }
 
       setStatus({ type: 'error', message: errorMessage });
-    } 
-    finally {
+    } finally {
       setIsSending(false);
     }
   };
@@ -95,7 +92,7 @@ export default function ContactFormInner() {
             <textarea
               id="message"
               name="message"
-              rows="5"
+              rows={5}
               required
               value={form.message}
               onChange={handleChange}

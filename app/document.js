@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
   return (
-    <Html lang="es" className="dark">
+    <Html lang="es">
       <Head>
         {/* Adobe Typekit preload example */}
         <link

@@ -54,7 +54,7 @@ export default function Footer() {
 
       {/* Footer Bottom */}
       <div className="mt-10 text-center text-sm text-slate-400">
-        &copy; {new Date().getFullYear()} IpniTyAI. All rights reserved.
+        &copy; <span suppressHydrationWarning>{new Date().getFullYear()}</span> IpniTyAI. All rights reserved.
       </div>
     </footer>
   );

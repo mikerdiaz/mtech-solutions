@@ -1,4 +1,5 @@
 'use client';
+
 import { FaSun, FaMoon } from 'react-icons/fa';
 import useTheme from '../hooks/useTheme'; // Asegúrate de que la ruta sea correcta
 
