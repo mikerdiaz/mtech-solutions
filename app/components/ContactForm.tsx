@@ -11,11 +11,16 @@ export default function ContactForm() {
     e.preventDefault();
     setStatus('');
 
+    const form = e.currentTarget;
+    const name = (form.elements.namedItem('name') as HTMLInputElement)?.value;
+    const email = (form.elements.namedItem('email') as HTMLInputElement)?.value;
+    const message = (form.elements.namedItem('message') as HTMLTextAreaElement)?.value;
+
     try {
       const response = await emailjs.sendForm(
         'your_service_id',     // ← reemplaza con tu ID real
         'your_template_id',    // ← reemplaza con tu ID real
-        e.currentTarget,
+        form,
         'your_user_id'         // ← reemplaza con tu ID real
       );
 
@@ -31,9 +36,9 @@ export default function ContactForm() {
         tags: { device: 'iPhone' },
         extra: {
           formData: {
-            name: e.currentTarget.name?.value,
-            email: e.currentTarget.email?.value,
-            message: e.currentTarget.message?.value,
+            name,
+            email,
+            message,
           },
           userAgent: navigator.userAgent,
         },
@@ -45,9 +50,26 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
-      <input name="name" type="text" placeholder="Nombre" required className="border p-2 w-full" />
-      <input name="email" type="email" placeholder="Email" required className="border p-2 w-full" />
-      <textarea name="message" placeholder="Mensaje" required className="border p-2 w-full" />
+      <input
+        name="name"
+        type="text"
+        placeholder="Nombre"
+        required
+        className="border p-2 w-full"
+      />
+      <input
+        name="email"
+        type="email"
+        placeholder="Email"
+        required
+        className="border p-2 w-full"
+      />
+      <textarea
+        name="message"
+        placeholder="Mensaje"
+        required
+        className="border p-2 w-full"
+      />
       <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">
         Enviar
       </button>
