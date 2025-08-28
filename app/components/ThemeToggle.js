@@ -17,7 +17,7 @@ export default function ThemeToggle() {
     >
       {isDark ? <FaSun /> : <FaMoon />}
       <span className="text-sm font-medium">
-        {isDark ? 'Modo claro' : 'Modo oscuro'}
+        {isDark ? 'Light mode' : 'Dark mode'}
       </span>
     </button>
   );

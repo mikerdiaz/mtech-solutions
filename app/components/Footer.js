@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto flex flex-wrap justify-between gap-8">
         {/* Contact Info */}
         <div>
-          <h2 className="text-lg font-semibold mb-4">Contacto</h2>
+          <h2 className="text-lg font-semibold mb-4">Contact</h2>
           <p className="mb-2">
             <FontAwesomeIcon icon={faPhone} className="mr-2" />
             (672) 962-5220
@@ -26,7 +26,7 @@ export default function Footer() {
 
         {/* Enlaces */}
         <div>
-          <h2 className="text-lg font-semibold mb-4">Redes & Web</h2>
+          <h2 className="text-lg font-semibold mb-4">Networks & Web</h2>
           <p className="mb-2">
             <FontAwesomeIcon icon={faGlobe} className="mr-2" />
             <a
@@ -54,7 +54,7 @@ export default function Footer() {
 
       {/* Footer Bottom */}
       <div className="mt-10 text-center text-sm text-slate-400">
-        &copy; {new Date().getFullYear()} IpniTyAI. Todos los derechos reservados.
+        &copy; {new Date().getFullYear()} IpniTyAI. All rights reserved.
       </div>
     </footer>
   );
