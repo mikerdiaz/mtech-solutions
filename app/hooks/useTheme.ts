@@ -2,8 +2,10 @@
 
 import { useEffect, useState } from 'react';
 
+type Theme = 'light' | 'dark';
+
 export default function useTheme() {
-  const [theme, setTheme] = useState<'light' | 'dark' | null>(null);
+  const [theme, setTheme] = useState<Theme>('light');
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -11,7 +13,12 @@ export default function useTheme() {
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    const initialTheme = savedTheme ?? (prefersDark ? 'dark' : 'light');
+    const initialTheme: Theme =
+      savedTheme === 'dark' || savedTheme === 'light'
+        ? savedTheme
+        : prefersDark
+        ? 'dark'
+        : 'light';
 
     root.classList.toggle('dark', initialTheme === 'dark');
     setTheme(initialTheme);
@@ -19,10 +26,8 @@ export default function useTheme() {
   }, []);
 
   const toggleTheme = () => {
-    if (!theme) return;
-
     const root = document.documentElement;
-    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    const newTheme: Theme = theme === 'dark' ? 'light' : 'dark';
 
     root.classList.toggle('dark', newTheme === 'dark');
     localStorage.setItem('theme', newTheme);
