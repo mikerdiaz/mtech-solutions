@@ -13,9 +13,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "baseUrl": ".",
+    "baseUrl": "app",
     "paths": {
-      "@/*": ["./*"]
+    "@/*": ["./*"]
     },
     "plugins": [
       {

@@ -5,7 +5,7 @@ const nextConfig = {
   reactStrictMode: true,
 
   webpack(config) {
-    config.resolve.alias['@'] = path.resolve(__dirname);
+    config.resolve.alias['@'] = path.resolve(__dirname, 'app');
     return config;
   },
 
