@@ -1,6 +1,5 @@
-const path = require('path');
+const isProd = process.env.NODE_ENV === 'production';
 
-/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
 
@@ -23,7 +22,7 @@ const nextConfig = {
                 "'unsafe-eval'",
                 "https://va.vercel-scripts.com",
                 "https://vercel.live",
-                "https://browser.sentry-cdn.com",
+                ...(isProd ? [] : ["https://browser.sentry-cdn.com"]),
               ],
               styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
               imgSrc: ["'self'", 'data:', 'https:'],
@@ -32,8 +31,9 @@ const nextConfig = {
                 "'self'",
                 "https://api.emailjs.com",
                 "https://4c80c56cbe8e.ngrok-free.app",
-                "https://sentry.io",
-                "https://*.ingest.sentry.io",
+                ...(isProd
+                  ? []
+                  : ["https://sentry.io", "https://*.ingest.sentry.io"]),
               ],
             },
           },
