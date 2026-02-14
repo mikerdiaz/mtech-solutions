@@ -3,14 +3,9 @@ Network Installation Services in British Columbia, Canada
 
 
 
-
-
-
-
-
 🌐 Live Website
 
-🔗 Production: https://yourdomain.com
+🔗 Production: https://ipnityai.com/
 
 ⚡ Automatic deployment via Vercel
 🌎 Custom domain configured
@@ -39,6 +34,7 @@ mtech-solutions/
 ├── styles/                  # Global styles
 ├── tailwind.config.js       # Tailwind configuration
 └── package.json             # Dependencies & scripts
+
 
 🧩 Architectural Highlights
 ✅ App Router Structure
@@ -133,7 +129,7 @@ Google Maps integration
 
 
 
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
