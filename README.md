@@ -1,173 +1,254 @@
-MTech Solutions – Network Installation Services in British Columbia
+🚀 MTech Solutions
+Network Installation Services in British Columbia, Canada
+
+
+
+
+
+
+
+
 🌐 Live Website
 
-🔗 Production deployed via Vercel
+🔗 Production: https://yourdomain.com
+
+⚡ Automatic deployment via Vercel
 🌎 Custom domain configured
 
-🏢 About the Business
+🏗️ Project Architecture
 
-MTech Solutions is a British Columbia-based network installation service founded and operated by Mike Díaz.
+This project is built using Next.js (App Router) and follows a modular component-based structure.
 
-The company provides structured cabling, Wi-Fi setup, troubleshooting, and on-site support for homes and small businesses.
+mtech-solutions/
+│
+├── app/
+│   ├── layout.js            # Global layout structure
+│   ├── page.js              # Main landing page
+│   └── components/
+│       └── Header.js        # Navigation bar & logo
+│
+├── components/
+│   ├── index.tsx            # Main page component
+│   ├── about.tsx            # About Us page
+│   ├── contact.tsx          # Contact page
+│   ├── Header.tsx           # Top navigation
+│   ├── Footer.tsx           # Footer section
+│   └── ServiceCard.tsx      # Reusable service cards
+│
+├── public/                  # Static assets (images, icons, logo)
+├── styles/                  # Global styles
+├── tailwind.config.js       # Tailwind configuration
+└── package.json             # Dependencies & scripts
 
-🎯 Target Market
+🧩 Architectural Highlights
+✅ App Router Structure
 
-Homeowners
+layout.js controls global layout
 
-Small offices & retail stores
+page.js renders main content
 
-Remote workers & entrepreneurs
+Component-based reusable architecture
 
-Airbnb hosts & suite owners
+✅ Reusable Components
 
-💡 Value Proposition
+Header & Footer shared across pages
 
-✔️ Fast, clean, and professional installations
-✔️ Personalized service directly from the owner
-✔️ Transparent pricing
-✔️ Post-installation support
-✔️ Reliable network performance
+ServiceCard for scalable service listings
 
-🖥️ Website Structure
+Clean separation between UI blocks
 
-The website is designed with a clean, conversion-focused structure:
+✅ Scalable Design
 
-🏠 Home
+Easy to expand into:
 
-Welcome message
+Booking system
 
-Founder introduction
+Quote calculator
 
-Company vision
+Dynamic content
 
-Call-to-action
+API integration
 
-🔧 Services
-
-Clear service descriptions
-
-Approximate pricing guidance
-
-Simple, client-friendly explanations
-
-👤 About
-
-Founder background
-
-Technical experience
-
-Mission and service philosophy
-
-📞 Contact
-
-Contact form
-
-WhatsApp integration
-
-Email contact
-
-Business hours
-
-⭐ Reviews (Future Feature)
-
-Client testimonials
-
-Social proof section
-
-🛠️ Technical Architecture
-
-This project is built using a modern frontend stack:
+⚙️ Tech Stack
 
 Framework: Next.js (App Router)
 
+Language: JavaScript / TypeScript
+
 Styling: Tailwind CSS
 
-Deployment: Vercel (automatic CI/CD)
+Deployment: Vercel (CI/CD enabled)
 
 Version Control: Git & GitHub
 
-Code Editor: Visual Studio Code
+Editor: Visual Studio Code
 
-Domain: Custom domain configured
+Domain: Custom domain connected
 
-🌿 Git Workflow & Environments
+🌿 Branching & Deployment Strategy
 
-This repository follows a structured branching strategy:
+This repository uses a 3-branch workflow:
 
-main → Production (live site)
+main → Production (Live)
 
-staging → Pre-production testing
+staging → Pre-production
 
 development → Active development
 
-Each branch triggers automatic deployment through Vercel, allowing proper environment separation and safe releases.
+Each branch triggers automatic deployment via Vercel.
 
-This setup demonstrates:
+This demonstrates:
 
-CI/CD understanding
+CI/CD knowledge
 
-Environment isolation
+Environment separation
 
-Professional deployment practices
+Professional Git workflow
 
-Version control discipline
+Release management discipline
 
-🚀 Project Goals
+🔐 Best Practices
 
-Establish a professional online presence in British Columbia
-
-Generate local leads
-
-Demonstrate technical ownership and modern web practices
-
-Build scalable digital infrastructure for future growth
-
-📈 Planned Enhancements
-
-Online booking system
-
-Dynamic quote request system
-
-SEO optimization for local BC ranking
-
-Google Maps integration
-
-Testimonials system
-
-Service area coverage page
-
-🔐 Security & Best Practices
+No sensitive data committed
 
 Environment variables handled securely
 
-No sensitive data committed to repository
+Responsive design
 
-Clean and maintainable component structure
+Component reusability
 
-Responsive design across devices
+Clean file structure
 
-👨‍💻 About the Founder
+📈 Future Improvements
 
-Mike Díaz is an IT professional with a focus on:
+Client testimonial module
 
-Network reliability
+Online booking feature
 
-Clean installations
+Quote request API
 
-Structured troubleshooting
+Local SEO optimization for BC
 
-Customer-first service
+Google Maps integration
 
-MTech Solutions represents both a business initiative and a technical portfolio project demonstrating real-world deployment and operational readiness.
 
-If you want next level polish, I can:
 
-🔥 Add an advanced "Technical Implementation Details" section (great for recruiters)
 
-📊 Add architecture diagram explanation
 
-🧪 Add QA / testing strategy section (this would help a LOT in your job applications)
 
-📈 Optimize it for SEO keywords in BC
 
-💼 Create a commercial version more sales-focused
+🧪 Testing & QA Strategy
+
+Although this project represents a small business website, it follows structured Quality Assurance principles to ensure reliability, performance, and maintainability.
+
+✅ Manual Testing Strategy
+🔎 Functional Testing
+
+Navigation links validation
+
+Form submission validation
+
+WhatsApp & email link testing
+
+Responsive behavior across breakpoints
+
+📱 Cross-Device Testing
+
+Desktop (Chrome, Edge)
+
+Tablet view
+
+Mobile responsiveness validation
+
+🧩 Component Testing
+
+Header navigation rendering
+
+Footer consistency
+
+ServiceCard reusability validation
+
+Layout structure integrity
+
+🧠 Exploratory Testing
+
+Exploratory sessions were conducted to simulate real user behavior:
+
+First-time visitor journey
+
+Service inquiry flow
+
+Mobile user navigation
+
+Error handling scenarios
+
+Focus areas:
+
+UX clarity
+
+CTA visibility
+
+Navigation simplicity
+
+Load behavior
+
+⚙️ Technical Validation
+Performance
+
+Optimized images in /public
+
+Tailwind utility-based styling for minimal CSS overhead
+
+Vercel optimized production builds
+
+Code Quality
+
+Component separation
+
+Reusable UI blocks
+
+Clean folder structure
+
+Controlled branching strategy (main, staging, development)
+
+🌿 Deployment Validation (CI/CD)
+
+Each branch triggers automatic deployment via Vercel:
+
+development → Feature testing
+
+staging → Pre-production validation
+
+main → Production release
+
+Before merging to main:
+
+Manual regression review
+
+Layout verification
+
+Responsive validation
+
+Link & navigation testing
+
+🚀 Future QA Improvements
+
+Add automated testing (Jest / React Testing Library)
+
+Lighthouse performance benchmarking
+
+Accessibility testing (WCAG validation)
+
+End-to-end testing with Playwright or Cypress
+
+Automated regression pipeline
+
+🎯 QA Mindset Applied
+
+This project demonstrates:
+
+✔️ Risk-based thinking
+✔️ Structured validation approach
+✔️ Environment separation
+✔️ Controlled release strategy
+✔️ Maintainable architecture
