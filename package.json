@@ -16,7 +16,7 @@
     "@vercel/analytics": "^1.5.0",
     "aos": "^2.3.4",
     "emailjs-com": "^3.2.0",
-    "next": "^15.4.6",
+    "next": "15.4.10",
     "next-secure-headers": "^2.2.0",
     "node-fetch": "^3.3.2",
     "react": "^18.3.1",
