@@ -2,6 +2,7 @@ import './globals.css';
 import AOSInitializer from './components/AOSInitializer';
 import ThemeToggle from './components/ThemeToggle';
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from 'next/script';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -26,8 +27,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="fixed top-4 right-4 z-50">
           <ThemeToggle />
         </div>
+
         {children}
+
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

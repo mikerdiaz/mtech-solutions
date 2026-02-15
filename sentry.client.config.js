@@ -1,4 +1,4 @@
-// sentry.edge.config.js
+// sentry.client.config.js
 
 import * as Sentry from "@sentry/nextjs";
 
@@ -12,8 +12,6 @@ Sentry.init({
   tracesSampleRate: isProd ? 0.1 : 1.0,
 
   // Solo logs verbosos en desarrollo
-  enableLogs: !isProd,
-
-  // Debug solo en desarrollo
+  enableTracing: true,
   debug: !isProd,
 });
