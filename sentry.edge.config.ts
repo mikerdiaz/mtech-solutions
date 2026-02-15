@@ -11,9 +11,6 @@ Sentry.init({
   // En producción: 10% (recomendado por Sentry)
   tracesSampleRate: isProd ? 0.1 : 1.0,
 
-  // Solo logs verbosos en desarrollo
-  enableLogs: !isProd,
-
   // Debug solo en desarrollo
   debug: !isProd,
 });
